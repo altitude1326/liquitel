@@ -36,6 +36,7 @@
         let s = document.createElement("span");
         s.innerHTML = c;
         s.onclick=(e)=>{
+            e.target.style.color="red";
             let v=e.target.innerHTML.charCodeAt(0)
             p+=(n+=v*2)*3;
             if(!((n*9-p)/10-56)){
