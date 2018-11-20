@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Liquitel</title>
+    <style>
+        div {
+            width: 20em;
+            height: 6em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+        }
+
+        span {
+            font-size: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+    </div>
+</body>
+<script>
+    const d = document.getElementsByTagName("div")[0];
+    var n=123,p=31;
+    function ds(c) {
+        let s = document.createElement("span");
+        s.innerHTML = c;
+        s.onclick=(e)=>{
+            let v=e.target.innerHTML.charCodeAt(0)
+            p+=(n+=v*2)*3;
+            if(!((n*9-p)/10-56)){
+                let ref=(navigator.language.indexOf("fr")>-1)?"fr":"en";
+                document.location="/"+ref+"/index.html";
+            }
+        }
+        d.appendChild(s);
+    }
+    for (let c of "LIQUITEL") {
+        ds(c);
+    }
+</script>
+
+</html>
