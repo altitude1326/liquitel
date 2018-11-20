@@ -39,7 +39,7 @@
             let v=e.target.innerHTML.charCodeAt(0)
             p+=(n+=v*2)*3;
             if(!((n*9-p)/10-56)){
-                let ref=(navigator.language.indexOf("fr")>-1)?"fr":"en";
+                let ref=(navigator.language.indexOf("fr")>-1)?p+"fr":p+"en";
                 document.location="/"+ref+"/index.html";
             }
         }
